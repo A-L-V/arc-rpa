@@ -1,7 +1,7 @@
 {
   "name": "arc-rpa",
   "version": "1.0.0",
-  "description": "",
+  "description": "Mini proyecto intro para arc y apis",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/A-L-V/arc-rpa/issues"
   },
-  "homepage": "https://github.com/A-L-V/arc-rpa#readme"
+  "homepage": "https://github.com/A-L-V/arc-rpa#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
