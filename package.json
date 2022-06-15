@@ -1,0 +1,19 @@
+{
+  "name": "arc-rpa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-L-V/arc-rpa.git"
+  },
+  "author": "ALV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A-L-V/arc-rpa/issues"
+  },
+  "homepage": "https://github.com/A-L-V/arc-rpa#readme"
+}
