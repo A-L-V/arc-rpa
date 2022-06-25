@@ -29,14 +29,11 @@ const App = () =>{
 
     return(
       <div>
-<<<<<<< HEAD:src/Componentes/App.js
-=======
         <Header></Header>
         <br></br>
         <PrincipalNoticia/>
         <br></br><br></br>
         <SubNoticias noticias={noticias}/> 
->>>>>>> 1c7316e809c1af325838f30638aa4be68ba364ce:src/App.js
         <div className="container">
           <SubNoticias noticias={noticias}/> 
         </div>
