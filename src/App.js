@@ -5,6 +5,7 @@ import Noticias from './componentes/Noticias';
 import {Header} from './Componentes/Header'
 import {SubNoticias} from './Componentes/SubNoticias'
 import {data} from './data.js'
+import PrincipalNoticia from './Componentes/PrincipalNoticia';
 
 const App = () =>{
   const [noticias, setNoticias] = React.useState(data);
@@ -28,6 +29,9 @@ const App = () =>{
     return(
       <div>
         <Header></Header>
+        <br></br>
+        <PrincipalNoticia/>
+        <br></br><br></br>
         <SubNoticias noticias={noticias}/> 
         <div className="container">
    
