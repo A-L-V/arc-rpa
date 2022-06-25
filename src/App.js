@@ -4,13 +4,13 @@ import React, {Component, component} from 'react';
 import Noticias from './componentes/Noticias';
 import {Header} from './Componentes/Header'
 import {SubNoticias} from './Componentes/SubNoticias'
-
+import {data} from './data.js'
 
 const App = () =>{
-  const [noticias, setNoticias] = React.useState('');
-  const [otrasNoticias, setOtrasNoticias] = React.useState('');
+  const [noticias, setNoticias] = React.useState(data);
+  //const [otrasNoticias, setOtrasNoticias] = React.useState('');
 
-
+/*
   const consultaNoticia = () => {
     let url = 'https://newsapi.org/v2/top-headlines?country=de&category=business&apiKey=fc13949e4b9541839f4693aa981caed5'
 
@@ -21,14 +21,14 @@ const App = () =>{
     .then(noticias =>{
       setNoticias(noticias.articles)
     })
-  }
+  }*/
   
-  consultaNoticia();
+  //consultaNoticia();
 
     return(
       <div>
         <Header></Header>
-        {/*<SubNoticias noticias={noticias}/> */}
+        <SubNoticias noticias={noticias}/> 
         <div className="container">
    
         </div>
