@@ -3,7 +3,10 @@ import React, {Component, component} from 'react';
 
 import Noticias from './Noticias';
 import {SubNoticias} from './SubNoticias'
-import {data} from '../data.js'
+import Noticias from './componentes/Noticias';
+import {Header} from './Componentes/Header'
+import {data} from './data.js'
+import PrincipalNoticia from './Componentes/PrincipalNoticia';
 
 const App = () =>{
   const [noticias, setNoticias] = React.useState(data);
@@ -26,6 +29,14 @@ const App = () =>{
 
     return(
       <div>
+<<<<<<< HEAD:src/Componentes/App.js
+=======
+        <Header></Header>
+        <br></br>
+        <PrincipalNoticia/>
+        <br></br><br></br>
+        <SubNoticias noticias={noticias}/> 
+>>>>>>> 1c7316e809c1af325838f30638aa4be68ba364ce:src/App.js
         <div className="container">
           <SubNoticias noticias={noticias}/> 
         </div>
