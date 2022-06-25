@@ -3,14 +3,19 @@ import React, {Component, component} from 'react';
 
 import Noticias from './Noticias';
 import {SubNoticias} from './SubNoticias'
-import Noticias from './componentes/Noticias';
-import {Header} from './Componentes/Header'
-import {data} from './data.js'
-import PrincipalNoticia from './Componentes/PrincipalNoticia';
+import {data} from '../data.js'
+import PrincipalNoticia from './PrincipalNoticia';
 
-const App = () =>{
-  const [noticias, setNoticias] = React.useState(data);
+
+
+
+function App() {
+  const [principalNoticia, setPrincipalNoticia] = React.useState(data.slice().splice(0,1)[0]);
+  const [subNoticias, setSubNoticias] = React.useState(data.slice().splice(1,4));
+  const [noticias, setNoticias] = React.useState(data.slice().splice(5,15));
+
   //const [otrasNoticias, setOtrasNoticias] = React.useState('');
+
 
 /*
   const consultaNoticia = () => {
@@ -29,19 +34,16 @@ const App = () =>{
 
     return(
       <div>
-        <Header></Header>
-        <br></br>
-        <PrincipalNoticia/>
+          <br></br>
+        <PrincipalNoticia noticia={principalNoticia}/>
         <br></br><br></br>
-        <SubNoticias noticias={noticias}/> 
         <div className="container">
-          <SubNoticias noticias={noticias}/> 
+          <SubNoticias noticias={subNoticias}/> 
         </div>
-
-
+        <br></br>
+        <Noticias noticias={noticias} />
       </div>
     )
-  
 }
 
 export default App;

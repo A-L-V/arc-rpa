@@ -6,7 +6,7 @@ function Login({ handleLogged, handleShowRegister, handleShowOlvide }) {
   const urlBase = "https://api-sandbox.elcomercio.pe";
   const [error, setError] = useState(false);
   const [dataLogin, setDataLogin] = useState({
-    emailLogin: "",
+    emailLogin: "", 
     passLogin: "",
   });
 
