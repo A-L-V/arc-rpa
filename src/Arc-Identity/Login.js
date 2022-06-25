@@ -67,10 +67,6 @@ function Login({ handleLogged, handleShowRegister, handleShowOlvide }) {
             Inciar sesión
           </button>
 
-          <br />
-          <a href="#" className="link" onClick={handleShowRegister}>
-            Registrarme
-          </a>
         </form>
       </section>
     </div>
