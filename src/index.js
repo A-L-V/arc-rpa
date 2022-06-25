@@ -1,48 +1,14 @@
-import ReactDOM from 'react-dom';
-import React, {Component, component} from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 
-import Noticias from './componentes/Noticias';
-
-class App extends Component{
-
-  state = {
-    noticias :[]
-  }
-
-  componentDidMount(){
-    this.consultaNoticia();
-  }
-
-  consultaNoticia = () => {
-    let url = 'https://newsapi.org/v2/top-headlines?country=de&category=business&apiKey=fc13949e4b9541839f4693aa981caed5'
-
-    fetch(url)
-    .then(respuesta =>{
-      return respuesta.json();
-    })
-    .then(noticias =>{
-      console.log(noticias)
-      this.setState({
-        noticias: noticias.articles
-      })
-    })
-  }
-
-  root.render(){
-    return(
-      <div>
-        <div className="container">
-        <Noticias 
-        noticias={this.state.noticias}
-        />
-        </div>
-
-
-      </div>
-    )
-  }
-}
-
-export default App;
-
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
