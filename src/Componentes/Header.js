@@ -7,6 +7,7 @@ import App from './App';
 import Registro from '../Arc-Identity/Registro'
 import OlvidePass from "../Arc-Identity/OlvidePass";
 import Perfil from "../Arc-Identity/Perfil";
+import Plan from '../Financiero/Plan'
 
 const Header= () => {
     const urlBase = "https://api-sandbox.elcomercio.pe";
@@ -71,6 +72,7 @@ const Header= () => {
                             (<Link to="/Login" className="nav-item nav-link">Login</Link>):
                             (<Link to="/Perfil" className="nav-item nav-link">Perfil</Link>)}
                             <Link to="/Registro" className="nav-item nav-link">Registro</Link>
+                            <Link to="/Plan" className="nav-item nav-link">Planes</Link>
                         </div>
                     </div>
                 </div>
@@ -94,6 +96,8 @@ const Header= () => {
                 )}
 
                 <Route path="Registro" element={<Registro  handleLogged={handleLogged}/>} />
+
+                <Route path="Plan" element={<Plan />} />
 
             </Routes>
             </BrowserRouter>
