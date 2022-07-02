@@ -4,9 +4,10 @@ import Noticia from './Noticia';
 
 const SubNoticias = (props) =>{
     const tamaño = {
-        altura: '250px',
-        ancho: '250px',
-        class: 'w-25 h-15'
+        altura: 0,
+        ancho:0,
+        clase: 'card-img-top',
+        noData: true,
     }
 
 

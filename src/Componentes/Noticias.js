@@ -7,6 +7,7 @@ class Noticias extends Component{
         altura: 0,
         ancho:0,
         clase: 'card-img-top',
+        noData: false,
     }
     render(){
         return (

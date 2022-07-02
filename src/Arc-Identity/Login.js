@@ -6,7 +6,7 @@ function Login({ handleLogged, handleShowRegister, handleShowOlvide }) {
   const urlBase = "https://api-sandbox.elcomercio.pe";
   const [error, setError] = useState(false);
   const [dataLogin, setDataLogin] = useState({
-    emailLogin: "",
+    emailLogin: "", 
     passLogin: "",
   });
 
@@ -67,10 +67,6 @@ function Login({ handleLogged, handleShowRegister, handleShowOlvide }) {
             Inciar sesión
           </button>
 
-          <br />
-          <a href="#" className="link" onClick={handleShowRegister}>
-            Registrarme
-          </a>
         </form>
       </section>
     </div>

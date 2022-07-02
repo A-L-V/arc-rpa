@@ -162,7 +162,7 @@ function Registro({ handleLogged }) {
             Registrarme
           </button>
         </form>
-      </section>
+  </section>
     </div>
   );
 }
