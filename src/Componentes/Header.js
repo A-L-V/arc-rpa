@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 
 import Identity from "@arc-publishing/sdk-identity";
@@ -7,7 +7,10 @@ import App from './App';
 import Registro from '../Arc-Identity/Registro'
 import OlvidePass from "../Arc-Identity/OlvidePass";
 import Perfil from "../Arc-Identity/Perfil";
-import Plan from '../Financiero/Plan'
+const Plan = React.lazy(() => import('../Financiero/Plan'));
+
+
+
 
 const Header= () => {
     const urlBase = "https://api-sandbox.elcomercio.pe";
@@ -78,10 +81,16 @@ const Header= () => {
                 </div>
             </nav>
             </div>
+            <Suspense fallback={<div>Loading...</div>}>
+
             <Routes>
                 <Route exact path="/" element={
                 <div> 
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <section>
                     <App></App>
+                    </section>
+                  </Suspense> 
                     </div>
                 }/>
                 
@@ -97,9 +106,10 @@ const Header= () => {
 
                 <Route path="Registro" element={<Registro  handleLogged={handleLogged}/>} />
 
-                <Route path="Plan" element={<Plan />} />
 
+                <Route path="Plan" element={<Plan />} />
             </Routes>
+            </Suspense>
             </BrowserRouter>
     )
 }
