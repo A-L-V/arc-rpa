@@ -3,12 +3,12 @@ import './Switch.css'
 import { AiFillCheckCircle } from 'react-icons/ai';
 import data from './PlanesData'
 
-
+import {Aviso} from './Aviso'
 
 const Plan = (props) => {
     const [activado, setActivado] = React.useState('true')
     const [info, setInfo] = React.useState(data[0])
-
+    
     const cambiarPlan = () => {
         if(activado){
             setInfo(data[1])
@@ -68,16 +68,14 @@ const Plan = (props) => {
                     </div>
                 })}
 
-                <div class="row align-items-center">
-                    <div class="col ">
+                <div className="row align-items-center">
+                    <div className="col ">
                         <hr></hr>
                     </div>
                 </div>
 
-                <div class="row align-items-center">
-                    <button class="col bg-black">
-                        <p class="fs-5 text-light text-center">Suscribirme</p>
-                    </button>
+                <div className="row align-items-center">
+                    <Aviso className="col text-light text-center bg-dark ">Suscribirme</Aviso>
                 </div>
 
 

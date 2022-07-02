@@ -1,9 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
-import { useEffect } from 'react';
 import Swal from 'sweetalert2';
+import React from "react";
 
-function App() {
+function Aviso() {
   const mostrarAlerta=()=>{
     Swal.fire({
       title: 'Informacion',
@@ -35,9 +33,9 @@ function App() {
   return(
     <div className='App'>
       <br/>
-      <button onClick={()=>mostrarAlerta()}>COMPRAR</button>
+      <button className="bg-dark " onClick={()=>mostrarAlerta()}>COMPRAR</button>
     </div>
   )
 }
 
-export default App;
+export {Aviso};
